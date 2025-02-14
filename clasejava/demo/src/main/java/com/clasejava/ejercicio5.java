@@ -1,11 +1,11 @@
 package com.clasejava;
 
-public class taller2 {
+public class ejercicio5 {
     public static void main(String[] args) {
-        for (int i = 2; i <= 20; i += 2)
-            
-        {
+        
+        for (int i = 1; i <= 10; i++) {
             System.out.println("numero: " + i);
         }
     }
+    
 }

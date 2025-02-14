@@ -1,6 +1,6 @@
 package com.clasejava;
 
-public class taller5 {
+public class ejercicio2 {
     public static void main(String[] args) {
         int numeroInt = 32;
         double numeroDouble = 3.2510;

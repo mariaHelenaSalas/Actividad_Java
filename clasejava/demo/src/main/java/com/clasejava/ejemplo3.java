@@ -1,6 +1,6 @@
 package com.clasejava;
 
-public class taller3 {
+public class ejemplo3 {
     public static void main(String[] args) {
         int suma = 0;
         for (int i = 1; i <=100; i++){

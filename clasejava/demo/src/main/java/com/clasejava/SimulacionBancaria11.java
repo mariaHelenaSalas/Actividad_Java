@@ -2,7 +2,7 @@ package com.clasejava;
 
 import java.util.Scanner;
 
-public class ejercicio13 {
+public class SimulacionBancaria11 {
     public static void main(String[] args) {
         Scanner teclado = new Scanner(System.in);
 

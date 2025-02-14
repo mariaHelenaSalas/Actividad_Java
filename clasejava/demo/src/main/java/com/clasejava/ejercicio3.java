@@ -2,7 +2,7 @@ package com.clasejava;
 
 import java.util.Scanner;
 
-public class taller6 {
+public class ejercicio3 {
     public static void main(String[] args) {
         String nombre;
         int edad;

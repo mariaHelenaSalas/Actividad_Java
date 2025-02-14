@@ -1,25 +1,15 @@
 package com.clasejava;
-
+import java.util.Random;
 import java.util.Scanner;
 
 public class ejercicio7 {
     public static void main(String[] args) {
-        int numero;
-        Scanner teclado = new Scanner(System.in);
+    
+        Random random =  new Random();
+        int min = 1;
+        int max = 100;
         
-        System.out.println("Ingresa un numero:");
-         numero = teclado.nextInt();
-
-       
-        
-         if (numero %2 == 0){
-            System.out.println("El nuumero es par");
-        }else{
-            System.out.println(" El numero es impar");
-        }
-
-        teclado.close();
+        int customNumber = min + random.nextInt(max - min + 1);
+        System.out.println("Numero aleatorio:"+  min + " y " + max + " es: " + customNumber);
     }
-
-
 }

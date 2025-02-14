@@ -2,7 +2,7 @@ package com.clasejava;
 
 import java.util.Scanner;
 
-public class ejercicio9 {
+public class ejercicio6 {
     public static void main(String[] args) {
         Scanner teclado = new Scanner(System.in);
 
@@ -12,7 +12,7 @@ public class ejercicio9 {
         int contador = 1;
         
         while (contador <= 10) {
-            System.out.println(numero + " " + contador + " = " + (numero * contador));
+            System.out.println(numero + " x " + contador + " = " + (numero * contador));
             contador++;
         }
 

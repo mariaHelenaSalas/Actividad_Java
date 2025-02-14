@@ -2,7 +2,7 @@ package com.clasejava;
 
 import java.util.Scanner;
 
-public class ejercicio12 {
+public class InteresCompuesto10 {
     public static void main(String[] args) {
         Scanner teclado = new Scanner(System.in);
 
