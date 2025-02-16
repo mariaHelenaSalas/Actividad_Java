@@ -15,7 +15,7 @@ public class claseerciciPropina {
             System.out.println("==================================");
             System.out.println("1. Calcular propina y total a pagar");
             System.out.println("2. Calcular total a pagar dividido entre varias personas");
-            System.out.println("Salir");
+            System.out.println("3. Salir");
             System.out.println("==================================");
             System.out.println("por favor, elige una opcion (1-3)");
 
@@ -28,7 +28,7 @@ public class claseerciciPropina {
                     break;
 
                 case 2:
-                    System.out.println("Dividir cuenta entre Varias personas");
+                  dividirCuenta(teclado);
 
                     break;
 
@@ -50,22 +50,70 @@ public class claseerciciPropina {
     
     
     public static void calcularPropinas(Scanner teclado) {
-        System.out.println("\n=====================================");
-        System.out.println("         Cálculo de propina            ");
-        System.out.println("=======================================");
+       
+        String respuesta;
 
-        System.out.println("Ingrese el monto de la cuenta: $");
-        double cuenta = teclado.nextDouble();
+        do {
 
-        System.out.println("Ingrese el porcentaje de propina (%): ");
-        double porcentaje = teclado.nextDouble();
+            System.out.println("\n=====================================");
+            System.out.println("         Cálculo de propina            ");
+            System.out.println("=======================================");
+    
+            System.out.println("Ingrese el monto de la cuenta: $");
+            double cuenta = teclado.nextDouble();
+    
+            System.out.println("Ingrese el porcentaje de propina (%): ");
+            double porcentaje = teclado.nextDouble();
+    
+            double propina = cuenta * (porcentaje / 100);
+            double total = cuenta + propina;
+    
+            System.out.printf("El calculode la propina es: $%.2f\n", propina);
+            System.out.printf("El total a pagar es: $%.2f\n", total);
 
-        double propina = cuenta * (porcentaje / 100);
-        double total = cuenta + propina;
+            System.out.println("Desea calcular nuevamente? (S/N): ");
+            respuesta = teclado.next();
 
-        System.out.printf("El calculode la propina es: $%.2f\n", propina);
-        System.out.printf("El total a pagar es: $%.2f\n", total);
+        } while (respuesta.equalsIgnoreCase("S"));
 
     }
+
+    public static void dividirCuenta(Scanner teclado) {
+
+        String respuesta;
+
+        do {
+
+            System.out.println("\n ===================================");
+            System.out.println("    Dividir Cuenta entre varias Personas");
+            System.out.println("========================================");
+
+            System.out.println("Ingrese el monto total de la cuenta: ");
+            double cuenta = teclado.nextDouble();
+
+            System.out.println("Ingrese el porcentaje de propina (%): ");
+            double porcentaje = teclado.nextDouble();
+
+            System.out.println("Ingrese el numero de persona: ");
+            int numPersonas = teclado.nextInt();
+
+            double propina =  cuenta * (porcentaje / 100);
+            double total = cuenta + propina;
+            double montoPersona = total / numPersonas;
+            
+            System.out.printf("La propina calculada es: $%.2f\n", propina);
+            System.out.printf("El total a pagar es:  $%.2f\n", total);
+            System.out.printf("Monto por persona: $%.2f\n", montoPersona);
+
+            System.out.println(" Deseas calcular nuevamente? (S/N)");
+            respuesta = teclado.next();
+
+
+        } while (respuesta.equalsIgnoreCase(("S")));
+
+        teclado.close();
+        
+    }
+
 
 }
