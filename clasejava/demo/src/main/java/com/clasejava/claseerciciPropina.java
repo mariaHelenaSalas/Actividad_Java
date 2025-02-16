@@ -10,29 +10,62 @@ public class claseerciciPropina {
         int opcion;
 
         do {
+            System.out.println("\n================================");
+            System.out.println("        SIMULADOR DE PROPINA      ");
+            System.out.println("==================================");
+            System.out.println("1. Calcular propina y total a pagar");
+            System.out.println("2. Calcular total a pagar dividido entre varias personas");
+            System.out.println("Salir");
+            System.out.println("==================================");
+            System.out.println("por favor, elige una opcion (1-3)");
+
+            opcion = teclado.nextInt();
+
+            switch (opcion) {
+                case 1:
+                    calcularPropinas(teclado);
+
+                    break;
+
+                case 2:
+                    System.out.println("Dividir cuenta entre Varias personas");
+
+                    break;
+
+                case 3:
+                    System.out.println("¡Gracias por usar el simulador dee propina!");
+
+                    break;
+
+                default:
+                    System.out.println("opcion invalida");
+
+            }
+
+        } while (opcion != 3);
+
+       teclado.close();
+
+    }
+    
+    
+    public static void calcularPropinas(Scanner teclado) {
         System.out.println("\n=====================================");
-        System.out.println("           SIMULADOR DE PROPINA       ");
+        System.out.println("         Cálculo de propina            ");
         System.out.println("=======================================");
 
-        System.out.println("1. Calular propina y total a pagar");
-        System.out.println("2. Calcular total a pagar dividido entre varias personas");
-        System.out.println("3. Salir");
-        System.out.println("===========================================");
+        System.out.println("Ingrese el monto de la cuenta: $");
+        double cuenta = teclado.nextDouble();
 
-        System.out.println("Por favor, elige una opcion(1-3)");
+        System.out.println("Ingrese el porcentaje de propina (%): ");
+        double porcentaje = teclado.nextDouble();
 
-        opcion = teclado.nextInt();
+        double propina = cuenta * (porcentaje / 100);
+        double total = cuenta + propina;
 
-        switch (opcion) {
-            case 1:
-                System.out.println();
-                break;
-        
-            default:
-                break;
-        }
+        System.out.printf("El calculode la propina es: $%.2f\n", propina);
+        System.out.printf("El total a pagar es: $%.2f\n", total);
 
-        }
     }
 
 }
